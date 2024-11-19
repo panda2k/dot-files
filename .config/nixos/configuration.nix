@@ -125,6 +125,7 @@ in
      kitty
      firefox-devedition
      unzip
+     flameshot
   ];
 
   environment.sessionVariables = {

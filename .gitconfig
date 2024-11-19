@@ -1,0 +1,7 @@
+[init]
+	defaultBranch = main
+[user]
+	email = thelowkeypanda@gmail.com
+	name = Michael Wang
+[core]
+	editor = nvim

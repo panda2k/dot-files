@@ -4,6 +4,9 @@
 
 { config, lib, pkgs, ... }:
 
+let 
+  unstable = import <nixos-unstable> {};
+in 
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -101,6 +104,15 @@
       thunderbird
       discord
       acpi
+      zig
+      gnumake
+      cmake
+      onlyoffice-bin
+      texliveFull
+      blender
+      # neovim required
+      unstable.fzf
+      ripgrep
     ];
   };
 
@@ -112,6 +124,7 @@
      pulseaudio # we use pipewire but need pulseaudio api for i3blocks
      kitty
      firefox-devedition
+     unzip
   ];
 
   environment.sessionVariables = {

@@ -92,6 +92,7 @@ in
 	"todoist-electron"
 	"obsidian"
 	"discord"
+	"slack"
     ];
   users.users.michael = {
     isNormalUser = true;
@@ -103,6 +104,7 @@ in
       obsidian
       thunderbird
       discord
+      slack
       acpi
       zig
       gnumake
@@ -121,6 +123,7 @@ in
   environment.systemPackages = with pkgs; [
      neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
      git
+     tmux
      pulseaudio # we use pipewire but need pulseaudio api for i3blocks
      kitty
      firefox-devedition

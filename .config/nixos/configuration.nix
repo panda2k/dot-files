@@ -128,6 +128,7 @@ in
      pulseaudio # we use pipewire but need pulseaudio api for i3blocks
      alsa-utils
      brightnessctl
+     xclip
      kitty
      firefox-devedition
      unzip

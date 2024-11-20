@@ -79,6 +79,7 @@ in
     pulse.enable = true;
     alsa.enable = true;
     alsa.support32Bit = true;
+    jack.enable = true;
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
@@ -125,6 +126,8 @@ in
      git
      tmux
      pulseaudio # we use pipewire but need pulseaudio api for i3blocks
+     alsa-utils
+     brightnessctl
      kitty
      firefox-devedition
      unzip

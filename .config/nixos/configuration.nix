@@ -30,6 +30,8 @@ in
 
   # Set your time zone.
   time.timeZone = "America/Los_Angeles";
+  
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -94,6 +96,7 @@ in
 	"obsidian"
 	"discord"
 	"slack"
+	"zoom"
     ];
   users.users.michael = {
     isNormalUser = true;
@@ -106,6 +109,7 @@ in
       thunderbird
       discord
       slack
+      zoom-us
       acpi
       zig
       gnumake

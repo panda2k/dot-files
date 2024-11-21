@@ -21,5 +21,5 @@ signal=1
 [time]
 command=~/.config/i3blocks/time/time
 interval=1
-STRFTIME_FORMAT=%a %b %d %H:%M:%S
+STRFTIME_FORMAT=%a %b %d %I:%M:%S %p
 

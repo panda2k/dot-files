@@ -1,3 +1,8 @@
+[airpods]
+markup=pango
+command=~/.config/i3blocks/airpods/airpods '74:15:F5:1A:46:CB'
+interval=2
+
 [battery]
 command=~/.config/i3blocks/battery/battery
 label=BAT 

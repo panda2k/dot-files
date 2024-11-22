@@ -65,6 +65,13 @@ in
       ];
     };
   };
+  services.power-profiles-daemon.enable = true;
+  services.libinput = {
+    enable = true;
+    touchpad = {
+      disableWhileTyping = true;
+    };
+  };
 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
@@ -83,8 +90,15 @@ in
     alsa.support32Bit = true;
     jack.enable = true;
   };
-  hardware.bluetooth.enable = true;
-  hardware.bluetooth.powerOnBoot = true;
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+    settings = {
+      General = {
+        ControllerMode = "bredr";
+      };
+    };
+  };
   services.blueman.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
@@ -135,6 +149,8 @@ in
      pulseaudio # we use pipewire but need pulseaudio api for i3blocks
      alsa-utils
      brightnessctl
+     power-profiles-daemon
+     libinput
      xclip
      kitty
      firefox-devedition

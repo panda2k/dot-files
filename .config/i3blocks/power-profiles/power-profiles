@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+current_profile=$(powerprofilesctl get)
+
+status_str() {
+    if [[ $current_profile == "balanced" ]]; then
+        echo 
+    elif [[ $current_profile == "power-saver" ]]; then
+        echo 
+    elif [[ $current_profile == "performance" ]]; then
+        echo 󰓅
+    fi
+}
+
+toggle_state() {
+    if [[ $current_profile == "balanced" ]]; then
+        powerprofilesctl set power-saver
+    elif [[ $current_profile == "power-saver" ]]; then
+        powerprofilesctl set performance
+    elif [[ $current_profile == "performance" ]]; then
+        powerprofilesctl set balanced
+    fi
+}
+
+if [ -z "$BLOCK_BUTTON" ]; then
+    status_str 
+elif [ "$BLOCK_BUTTON" -eq 1 ]; then
+    toggle_state
+fi
+

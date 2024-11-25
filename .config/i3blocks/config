@@ -1,3 +1,7 @@
+[power-profiles]
+command=~/.config/i3blocks/power-profiles/power-profiles
+interval=2
+
 [airpods]
 markup=pango
 command=~/.config/i3blocks/airpods/airpods '74:15:F5:1A:46:CB'

@@ -33,7 +33,7 @@ toggle_state() {
         bluetoothctl disconnect $device
         bluetoothctl block $device
     elif [[ $controller_on ]] && [[ ! $device_blocked ]];then
-        bluetoothctl block $device
+        bluetoothctl connect $device
     elif [[ $controller_on ]] && [[ $device_blocked ]];then
         bluetoothctl unblock $device
         bluetoothctl connect $device

@@ -33,7 +33,7 @@ nvim_lsp.gopls.setup{}
 nvim_lsp.zls.setup{}
 
 -- Elixir Lexical
-local lexical_config = {
+--[[local lexical_config = {
   filetypes = { "elixir", "eelixir", "heex" },
   cmd = { "/Users/michael/Programming/Tools/lexical/_build/dev/package/lexical/bin/start_lexical.sh" },
   settings = {},
@@ -53,5 +53,5 @@ if not configs.lexical then
   }
 end
 
-nvim_lsp.lexical.setup({})
+nvim_lsp.lexical.setup({})--]]
 

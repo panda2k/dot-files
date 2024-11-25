@@ -46,4 +46,5 @@ require('lazy').setup({
     'lervag/vimtex',
     'vim-airline/vim-airline',
     'tpope/vim-fugitive',
+    'NMAC427/guess-indent.nvim'
 })

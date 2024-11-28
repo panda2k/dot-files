@@ -3,12 +3,10 @@ if (not status) then return end
 
 ts.setup {
   highlight = {
-    enable = true,
-    disable = {},
+    enable = true
   },
   indent = {
-    enable = false,
-    disable = {},
+    enable = false
   },
   ensure_installed = {
     "tsx",

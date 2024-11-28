@@ -39,9 +39,9 @@ require('lazy').setup({
     },
     {
         "folke/trouble.nvim",
-        opts = {},
+        opts = {}, -- for default options, refer to the configuration section for custom setup.
         cmd = "Trouble",
-        dependencies = "kyazdani42/nvim-web-devicons",
+        version = "3.6.0"
     },
     'lervag/vimtex',
     'vim-airline/vim-airline',

@@ -129,8 +129,6 @@ in
       zoom-us
       acpi
       zig
-      gnumake
-      cmake
       onlyoffice-bin
       texliveFull
       blender
@@ -155,7 +153,9 @@ in
      kitty
      firefox-devedition
      unzip
+     zip
      flameshot
+     obs-studio
   ];
 
   environment.sessionVariables = {

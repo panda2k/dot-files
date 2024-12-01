@@ -156,6 +156,7 @@ in
      zip
      flameshot
      obs-studio
+     vlc
   ];
 
   environment.sessionVariables = {

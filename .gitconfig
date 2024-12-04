@@ -5,3 +5,5 @@
 	name = Michael Wang
 [core]
 	editor = nvim
+[push]
+	autoSetupRemote = true

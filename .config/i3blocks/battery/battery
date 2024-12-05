@@ -22,11 +22,12 @@ my $percent;
 my $ac_adapt;
 my $full_text;
 my $short_text;
-my $bat_number = $ENV{BAT_NUMBER} || 0;
+#my $bat_number = $ENV{BAT_NUMBER} || 0;
 my $label = $ENV{LABEL} || "";
 
 # read the first line of the "acpi" command output
-open (ACPI, "acpi -b 2>/dev/null| grep 'Battery $bat_number' |") or die;
+# look for battery 0 or 1 since when i plug in my iPhone, battery number swaps to 1 instead of 0
+open (ACPI, "acpi -b 2>/dev/null| grep -E 'Battery [01]' |") or die;
 $acpi = <ACPI>;
 close(ACPI);
 

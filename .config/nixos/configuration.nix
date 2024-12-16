@@ -114,6 +114,7 @@ in
 	"discord"
 	"slack"
 	"zoom"
+	"corefonts"
     ];
   users.users.michael = {
     isNormalUser = true;
@@ -129,9 +130,9 @@ in
       zoom-us
       acpi
       zig
-      onlyoffice-bin
       texliveFull
       blender
+      shotcut
       # neovim required
       unstable.fzf
       ripgrep
@@ -157,6 +158,7 @@ in
      flameshot
      obs-studio
      vlc
+     onlyoffice-desktopeditors
   ];
 
   environment.sessionVariables = {
@@ -167,6 +169,7 @@ in
 
   fonts.packages = with pkgs; [
     nerdfonts
+    corefonts
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

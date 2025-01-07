@@ -7,6 +7,12 @@ markup=pango
 command=~/.config/i3blocks/airpods/airpods '74:15:F5:1A:46:CB'
 interval=2
 
+[volume-pipewire]
+command=~/.config/i3blocks/volume-pipewire/volume-pipewire
+interval=once
+signal=1
+USE_ALSA_NAME=1
+
 [battery]
 command=~/.config/i3blocks/battery/battery
 label=BAT 
@@ -16,11 +22,6 @@ interval=30
 command=~/.config/i3blocks/memory/memory
 label=MEM 
 interval=30
-
-[volume-pipewire]
-command=~/.config/i3blocks/volume-pipewire/volume-pipewire
-interval=once
-signal=1
 
 [time]
 command=~/.config/i3blocks/time/time

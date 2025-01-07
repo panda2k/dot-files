@@ -105,17 +105,7 @@ in
   # services.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  nixpkgs.config.allowUnfreePredicate = pkg: 
-    builtins.elem (lib.getName pkg) [
-	"pycharm-professional"
-	"webstorm"
-	"todoist-electron"
-	"obsidian"
-	"discord"
-	"slack"
-	"zoom"
-	"corefonts"
-    ];
+  nixpkgs.config.allowUnfree = true;
   users.users.michael = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
@@ -147,18 +137,21 @@ in
      tmux
      pulseaudio # we use pipewire but need pulseaudio api for i3blocks
      alsa-utils
+     playerctl
      brightnessctl
      power-profiles-daemon
      libinput
      xclip
      kitty
      firefox-devedition
+     chromium
      unzip
      zip
      flameshot
      obs-studio
      vlc
      onlyoffice-desktopeditors
+     pavucontrol
   ];
 
   environment.sessionVariables = {

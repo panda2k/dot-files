@@ -31,6 +31,7 @@ nvim_lsp.ccls.setup{}
 nvim_lsp.ocamllsp.setup{}
 nvim_lsp.gopls.setup{}
 nvim_lsp.zls.setup{}
+nvim_lsp.hls.setup{}
 
 -- Elixir Lexical
 nvim_lsp.lexical.setup({

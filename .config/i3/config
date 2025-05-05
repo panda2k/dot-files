@@ -77,6 +77,7 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+space exec --no-startup-id dmenu_run
+bindsym Mod4+space exec --no-startup-id dmenu_run
 
 # start the screenshot tool
 bindsym Print exec --no-startup-id flameshot gui

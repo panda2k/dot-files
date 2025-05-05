@@ -65,6 +65,9 @@ in
       ];
     };
   };
+  services.logind = {
+  	lidSwitch = "suspend";
+  };
   services.power-profiles-daemon.enable = true;
   services.libinput = {
     enable = true;
@@ -121,8 +124,10 @@ in
       acpi
       zig
       texliveFull
+      pandoc
       blender
       shotcut
+      unstable.mixxx
       # neovim required
       unstable.fzf
       ripgrep
@@ -150,7 +155,7 @@ in
      flameshot
      obs-studio
      vlc
-     onlyoffice-desktopeditors
+     unstable.onlyoffice-desktopeditors
      pavucontrol
   ];
 

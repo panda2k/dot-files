@@ -5,7 +5,11 @@
 { config, lib, pkgs, ... }:
 
 let 
-  unstable = import <nixos-unstable> {};
+  unstable = import <nixos-unstable> {
+    config = {
+      allowUnfree = true;
+    };
+  };
 in 
 {
   imports =
@@ -119,13 +123,13 @@ in
       obsidian
       thunderbird
       discord
+      unstable.tidal-hifi
       slack
       zoom-us
       acpi
       zig
       texliveFull
       pandoc
-      blender
       shotcut
       unstable.mixxx
       # neovim required
@@ -181,11 +185,26 @@ in
   programs.neovim = {
     defaultEditor = true;
   };
-  programs.bash.shellAliases = {
-    vim = "nvim";
-    dotfiles = "git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME";
+  programs.bash = {
+    shellAliases = {
+      vim = "nvim";
+      dotfiles = "git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME";
+    };
   };
-
+  
+  # onlyoffice has trouble with symlinks: https://github.com/ONLYOFFICE/DocumentServer/issues/1859
+  system.userActivationScripts = {
+    copy-fonts-local-share = {
+      text = ''
+        rm -rf ~/.local/share/fonts
+        mkdir -p ~/.local/share/fonts
+        cp ${pkgs.corefonts}/share/fonts/truetype/* ~/.local/share/fonts/
+        chmod 544 ~/.local/share/fonts
+        chmod 444 ~/.local/share/fonts/*
+      '';
+    };
+  };
+  
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
